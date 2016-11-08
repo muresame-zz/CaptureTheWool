@@ -29,12 +29,6 @@ import com.gmail.lynx7478.ctw.menus.MenuManager;
  * Created by SKA4 on 02/08/2016.
  */
 public class CTW extends JavaPlugin {
-	
-	// Jota Yi Yi.
-	
-	// Skippah is prah.
-	// asdasdadasd
-	
 
     private static CTW instance;
 
