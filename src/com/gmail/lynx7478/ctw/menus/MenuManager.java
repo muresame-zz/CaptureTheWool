@@ -61,7 +61,7 @@ public class MenuManager implements Listener {
 					for(Menus s : selectors)
 					{
 						CTW.getInstance().getLogger().log(Level.SEVERE, "Cycled through menus.");
-						if(s.getInventory().getName().equals(e.getInventory().getName()))
+						if(s.getInventory().getName().equals(e.getInventory().getName())) // Error is here. NPE.
 						{
 							CTW.getInstance().getLogger().log(Level.SEVERE, "Found a matching inventory.");
 							for(ItemBuilder i : s.getContents())
