@@ -1,0 +1,16 @@
+name: CaptureTheWool
+main: com.gmail.lynx7478.ctw.CTW
+author: SKA4
+description: Capture the wool minigame plugin.
+version: 2.2
+commands:
+  mapbuilder:
+    description: Opens the mapbuilder.
+  team:
+    description: Joins a team.
+  ctw:
+    description: CTW main command.
+  roles:
+    description: Role command.
+  afk:
+    description: AFK command.
