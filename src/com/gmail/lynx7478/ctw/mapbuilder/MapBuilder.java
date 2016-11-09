@@ -1,6 +1,7 @@
 package com.gmail.lynx7478.ctw.mapbuilder;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -9,8 +10,12 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+
+import com.gmail.lynx7478.ctw.CTW;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
 
 /**
  * Created by SKA4 on 03/08/2016.
@@ -106,6 +111,24 @@ public class MapBuilder implements Listener {
     		ItemStack i = e.getItem();
     		if(i.hasItemMeta() && i.getItemMeta().hasDisplayName())
     		{
+    			
+    			if(i.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "Right click to open the map builder."))
+    			{
+    				switch(builder)
+    				{
+    				case "Main":
+    					e.getPlayer().openInventory(getMainInv());
+    					break;
+    				case "Map":
+    					e.getPlayer().openInventory(getMapInv());
+    					break;
+    				default:
+    					CTW.getInstance().getLogger().log(Level.SEVERE, "Something went terribly wrong with the map builer. Please contact SKA4 immediately.");
+    					e.getPlayer().sendMessage(ChatColor.RED + "Something went terribly wrong with the map builer. Please contact SKA4 immediately.");
+    					break;
+    				}
+    			}
+    			
     			// p.sendMessage("Has meta and name.");
     			for(ItemWrapper wrapper : items)
     			{
@@ -136,5 +159,14 @@ public class MapBuilder implements Listener {
     public static Inventory getMapInv()
     {
     	return mapInv;
+    }
+    
+    public static ItemStack getMapBuilderItem()
+    {
+    	ItemStack i = new ItemStack(Material.DIAMOND_PICKAXE);
+    	ItemMeta m = i.getItemMeta();
+    	m.setDisplayName(ChatColor.AQUA + "Right click to open the map builder.");
+    	i.setItemMeta(m);
+    	return i;
     }
 }

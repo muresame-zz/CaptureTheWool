@@ -56,14 +56,15 @@ public class MenuManager implements Listener {
 				{
 					for(Menus s : selectors)
 					{
-						if(s.isMapBuilder == true)
+						if(e.getInventory().getName().equals(s.getInventory().getName()))
+						{
+							for(ItemBuilder i : s.getContents())
+							{
+								i.getFunction().onItemClick(CTWPlayer.getCTWPlayer(e.getWhoClicked().getUniqueId()), e.getCurrentItem());
+							}
+						}else
 						{
 							return;
-						}
-						
-						for(ItemBuilder iB : s.getContents())
-						{
-							iB.getFunction().onItemClick(CTWPlayer.getCTWPlayer(e.getWhoClicked().getUniqueId()), e.getCurrentItem());
 						}
 					}
 				}
