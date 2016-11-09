@@ -9,7 +9,6 @@ import org.bukkit.entity.Player;
 
 import com.gmail.lynx7478.ctw.CTW;
 import com.gmail.lynx7478.ctw.game.Game;
-import com.gmail.lynx7478.ctw.menus.Menus;
 
 public class CTWCommand implements CommandExecutor {
 
@@ -51,7 +50,7 @@ public class CTWCommand implements CommandExecutor {
 			{
 				if(p.hasPermission("CTW.MapBuilder"))
 				{
-					Menus.MAPBUILDERITEM.give(p);
+//					Menus.MAPBUILDERITEM.give(p);
 //					p.getInventory().addItem(MapBuilderManager.mapBuilder());
 				}
 			}

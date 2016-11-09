@@ -78,7 +78,7 @@ public enum Menus {
 							},(byte) 3)
 					}, true),
 	
-	MAPBUILDERITEM(Material.DIAMOND_PICKAXE, "Left click to open the mapbuilder.", new ItemFunction()
+	/** MAPBUILDERITEM(Material.DIAMOND_PICKAXE, "Left click to open the mapbuilder.", new ItemFunction()
 			{
 
 				@Override
@@ -105,7 +105,7 @@ public enum Menus {
 					return;
 				}
 		
-			}, false),
+			}, false, true), **/
 	
 	ROLESELECTOR(Material.PAPER, "Left click to select a role.", "Role Selector", new ItemFunction()
 			{
@@ -147,10 +147,12 @@ public enum Menus {
 	private ItemBuilder[] contents;
 	private Inventory inventory;
 	
+	public boolean isMapBuilder = false;
+	
 	private boolean giveToPlayer;
 	
-	// Only interact items. Ex.: Map builder pickaxe.
-	Menus(Material m, String name, ItemFunction func, boolean giveToPlayer)
+	// Only for the mapbuilder pickaxe.
+	Menus(Material m, String name, ItemFunction func, boolean giveToPlayer, boolean isMapBuilder)
 	{
 		this.item = new ItemStack(m);
 		ItemMeta me = this.item.getItemMeta();
@@ -158,6 +160,7 @@ public enum Menus {
 		item.setItemMeta(me);
 		this.giveToPlayer = giveToPlayer;
 		this.function = func;
+		this.isMapBuilder = isMapBuilder;
 	}
 	
 	// ONLY FOR THE ROLE SELECTOR!!

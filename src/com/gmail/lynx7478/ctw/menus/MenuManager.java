@@ -24,7 +24,7 @@ public class MenuManager implements Listener {
 		selectors = new ArrayList<Menus>();
 		selectors.add(Menus.ROLESELECTOR);
 		selectors.add(Menus.TEAMSELECTOR);
-		selectors.add(Menus.MAPBUILDERITEM);
+//		selectors.add(Menus.MAPBUILDERITEM);
 	}
 	
 	@EventHandler
@@ -48,32 +48,22 @@ public class MenuManager implements Listener {
 	@EventHandler
 	public void onInventoryClick(InventoryClickEvent e)
 	{
-		if(e.getClickedInventory() != null && e.getInventory() != null)
+		if(e.getInventory() != null && e.getClickedInventory() != null)
 		{
 			if(e.getCurrentItem() != null && e.getCurrentItem().getType() != Material.AIR)
 			{
-				if(e.getInventory().getType() == InventoryType.CREATIVE || e.getClickedInventory().getType() == InventoryType.CREATIVE)
-				{
-					return;
-				}
 				if(e.getCurrentItem().hasItemMeta() && e.getCurrentItem().getItemMeta().hasDisplayName())
 				{
 					for(Menus s : selectors)
 					{
-						CTW.getInstance().getLogger().log(Level.SEVERE, "Cycled through menus.");
-						if(s.getInventory().getName().equals(e.getInventory().getName())) // Error is here. NPE.
+						if(s.isMapBuilder == true)
 						{
-							CTW.getInstance().getLogger().log(Level.SEVERE, "Found a matching inventory.");
-							for(ItemBuilder i : s.getContents())
-							{
-								CTW.getInstance().getLogger().log(Level.SEVERE, "Cycled through items.");
-								if(e.getCurrentItem().getItemMeta().getDisplayName().equals(i.toItemStack().getItemMeta().getDisplayName()))
-								{
-									CTW.getInstance().getLogger().log(Level.SEVERE, "match.");
-									s.getItemFunction().onItemClick(CTWPlayer.getCTWPlayer(e.getWhoClicked().getUniqueId()), i.toItemStack());
-									CTW.getInstance().getLogger().log(Level.SEVERE, "Done.");
-								}
-							}
+							return;
+						}
+						
+						for(ItemBuilder iB : s.getContents())
+						{
+							iB.getFunction().onItemClick(CTWPlayer.getCTWPlayer(e.getWhoClicked().getUniqueId()), e.getCurrentItem());
 						}
 					}
 				}
