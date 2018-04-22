@@ -26,132 +26,182 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="module-library">
-      <library name="spigot-1.8.8-R0.1-SNAPSHOT-latest.jar">
+      <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.12.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.12.jar!/" />
+        </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="spigot-1.7.2-R0.4-SNAPSHOT-1339.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.7.2-R0.4-SNAPSHOT-1339.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="spigot-1.7.5-R0.1-SNAPSHOT-1387.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.7.5-R0.1-SNAPSHOT-1387.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="spigot-1.7.8-R0.1-SNAPSHOT.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.7.8-R0.1-SNAPSHOT.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="spigot-1.7.9-R0.2-SNAPSHOT.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.7.9-R0.2-SNAPSHOT.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="spigot-1.7.10-SNAPSHOT-b1657.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.7.10-SNAPSHOT-b1657.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="spigot-1.8.3-R0.1-SNAPSHOT-latest.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.8.3-R0.1-SNAPSHOT-latest.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="spigot-1.8.4-R0.1-SNAPSHOT-latest.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.8.4-R0.1-SNAPSHOT-latest.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="spigot-1.8.5-R0.1-SNAPSHOT-latest.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.8.5-R0.1-SNAPSHOT-latest.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="spigot-1.8-R0.1-SNAPSHOT-latest.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.8-R0.1-SNAPSHOT-latest.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="spigot-1.9.4-R0.1-SNAPSHOT-latest.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.9.4-R0.1-SNAPSHOT-latest.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="spigot-1.9-R0.1-SNAPSHOT-latest.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.9-R0.1-SNAPSHOT-latest.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="spigot-1.10.2-R0.1-SNAPSHOT-latest.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.10.2-R0.1-SNAPSHOT-latest.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="spigot-1.10-R0.1-SNAPSHOT-latest.jar">
+      <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.10-R0.1-SNAPSHOT-latest.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.10-R0.1-SNAPSHOT-latest.jar!/" />
+        </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.10.2-R0.1-SNAPSHOT-latest.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.10.2-R0.1-SNAPSHOT-latest.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.11.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.11.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.7.10-SNAPSHOT-b1657.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.7.10-SNAPSHOT-b1657.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.7.2-R0.4-SNAPSHOT-1339.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.7.2-R0.4-SNAPSHOT-1339.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.7.5-R0.1-SNAPSHOT-1387.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.7.5-R0.1-SNAPSHOT-1387.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.7.8-R0.1-SNAPSHOT.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.7.8-R0.1-SNAPSHOT.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.7.9-R0.2-SNAPSHOT.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.7.9-R0.2-SNAPSHOT.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.8-R0.1-SNAPSHOT-latest.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.8-R0.1-SNAPSHOT-latest.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.8.3-R0.1-SNAPSHOT-latest.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.8.3-R0.1-SNAPSHOT-latest.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.8.4-R0.1-SNAPSHOT-latest.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.8.4-R0.1-SNAPSHOT-latest.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.8.5-R0.1-SNAPSHOT-latest.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.8.5-R0.1-SNAPSHOT-latest.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.9-R0.1-SNAPSHOT-latest.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.9-R0.1-SNAPSHOT-latest.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.9.4-R0.1-SNAPSHOT-latest.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../Libraries/spigot-1.9.4-R0.1-SNAPSHOT-latest.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
