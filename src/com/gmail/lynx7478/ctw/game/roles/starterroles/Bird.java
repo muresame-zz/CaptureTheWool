@@ -1,6 +1,6 @@
 package com.gmail.lynx7478.ctw.game.roles.starterroles;
 
-import java.util.List;
+/** import java.util.List;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -8,11 +8,11 @@ import org.bukkit.inventory.ItemStack;
 
 import com.gmail.lynx7478.ctw.game.roles.Loadout;
 import com.gmail.lynx7478.ctw.game.roles.Role;
-import com.gmail.lynx7478.ctw.utils.ItemUtils;
+import com.gmail.lynx7478.ctw.utils.ItemUtils; **/
 
-public class Bird extends Role {
+public class Bird {
 
-	@Override
+/*	@Override
 	public List<String> getDescription() {
 		return createList(
 				"You are the wings.",
@@ -56,5 +56,5 @@ public class Bird extends Role {
 	public void onSpecialItemClick(Player arg0, ItemStack arg1) {
 		return;
 	}
-
+*/
 }

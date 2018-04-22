@@ -12,7 +12,7 @@ public class RoleManager {
 	{
 		roles = new ArrayList<Role>();
 		
-		roles.add(new Bird());
+//		roles.add(new Bird());
 		roles.add(new Builder());
 		roles.add(new Guard());
 		roles.add(new Miner());
