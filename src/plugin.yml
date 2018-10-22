@@ -1,0 +1,6 @@
+name: CaptureTheWool
+main: com.gmail.lynx7478.ctw.CTW
+authors: Muresame
+description: Capture the wool minigame plugin.
+version: 2.2
+commands:
