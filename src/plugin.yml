@@ -4,3 +4,13 @@ authors: Muresame
 description: Capture the wool minigame plugin.
 version: 2.2
 commands:
+   mapbuilder:
+     description: Opens the mapbuilder.
+   team:
+     description: Joins a team.
+   ctw:
+     description: CTW main command.
+   roles:
+     description: Role command.
+   afk:
+     description: AFK command.
