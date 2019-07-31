@@ -12,8 +12,8 @@ import org.bukkit.entity.Player;
 /**
  * Created by SKA4 on 03/08/2016.
  */
-public class TeamCommand implements CommandExecutor {
-    @Override
+public class TeamCommand {
+/*    @Override
     public boolean onCommand(CommandSender sender, Command team, String s, String[] args) {
         if(team.getName().equalsIgnoreCase("team"))
         {
@@ -23,6 +23,10 @@ public class TeamCommand implements CommandExecutor {
                 return false;
             }
             CTWPlayer p = CTWPlayer.getCTWPlayer(((Player) sender).getUniqueId());
+            if(args.length == 0)
+            {
+            	p.getPlayer().sendMessage(ChatColor.RED+"Please choose a team to join.");
+            }
             if(args[0].equalsIgnoreCase("rgb"))
             {
             	this.checkTeam(CTWTeam.RGB, p);
@@ -76,5 +80,5 @@ public class TeamCommand implements CommandExecutor {
     		return CTWTeam.RGB;
     	else
     		return CTWTeam.CMY;
-    }
+    } */
 }

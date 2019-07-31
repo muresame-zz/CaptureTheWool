@@ -55,13 +55,15 @@ public enum ItemWrapper {
     		p.closeInventory();
     		MapBuilder.builder = "Map";
     		Game.initMap();
-    		SingleQuestionPrompt.newPrompt(p, ChatColor.DARK_PURPLE+"Please enter the name of the world you would like to world.", new AcceptAnswer()
+    		SingleQuestionPrompt.newPrompt(p, ChatColor.DARK_PURPLE+"Please enter the name of the world you would like to load.", new AcceptAnswer()
     				{
 
 						@Override
 						public boolean onAnswer(String input) 
 						{
+							System.out.println("Received answer.");
 							Game.getMap().loadMapConfig(new File(CTW.getInstance().getWorldDirectory()+File.separator+input));
+							System.out.println("Map got: "+Game.getMap().getWorld().getName());
 							return true;
 						}
     			

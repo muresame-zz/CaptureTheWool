@@ -91,7 +91,7 @@ public class MapBuilder implements Listener {
         			i.getFunction().func((Player) e.getWhoClicked(), null);
         		}else
         		{
-        			e.getWhoClicked().getInventory().setItemInHand(i.toItemStack());
+        			e.getWhoClicked().getInventory().addItem(i.toItemStack());
         			e.getWhoClicked().closeInventory();
         		}
         	}
@@ -141,6 +141,7 @@ public class MapBuilder implements Listener {
     						// p.sendMessage("Is interact type.");
     						if(e.getAction() == wrapper.getAction())
     						{
+    							e.setCancelled(true);
     							wrapper.getFunction().func(e.getPlayer(), e.getClickedBlock());
     						}
     						// p.sendMessage("Function executed?");

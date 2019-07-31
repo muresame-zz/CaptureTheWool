@@ -5,14 +5,15 @@ import java.io.IOException;
 import java.util.logging.Level;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.gmail.lynx7478.ctw.commands.AFKCommand;
 import com.gmail.lynx7478.ctw.commands.CTWCommand;
 import com.gmail.lynx7478.ctw.commands.RoleCommand;
-import com.gmail.lynx7478.ctw.commands.TeamCommand;
 import com.gmail.lynx7478.ctw.game.CTWPlayer;
+import com.gmail.lynx7478.ctw.game.CTWTeam;
 import com.gmail.lynx7478.ctw.game.GameListeners;
 import com.gmail.lynx7478.ctw.game.GameVars;
 import com.gmail.lynx7478.ctw.game.Lobby;
@@ -84,7 +85,7 @@ public class CTW extends JavaPlugin {
         // Menu manager.
         this.getServer().getPluginManager().registerEvents(new MenuManager(), this);
         // Commands.
-        this.getCommand("team").setExecutor(new TeamCommand());
+//        this.getCommand("team").setExecutor(new TeamCommand());
         this.getCommand("ctw").setExecutor(new CTWCommand());
         this.getCommand("roles").setExecutor(new RoleCommand());
         this.getCommand("afk").setExecutor(new AFKCommand());
@@ -113,5 +114,41 @@ public class CTW extends JavaPlugin {
     public File getWorldDirectory()
     {
     	return this.worldDirectory;
+    }
+    
+    public void checkTeam(CTWTeam t, CTWPlayer p)
+    {
+    	if(p.hasTeam())
+    	{
+    		p.sendMessage(ChatColor.RED + "You already have a team!");
+    		return;
+    	}
+    	if(t.getPlayerCount() > CTWTeam.getOppositeTeam(t).getPlayerCount())
+    	{
+    		if((t.getPlayerCount() - CTWTeam.getOppositeTeam(p).getPlayerCount()) >= 2)
+    		{
+    			p.sendMessage(ChatColor.RED+"The team is full! Please join another team.");
+    			return;
+    		}
+    	}
+    	this.joinTeam(t, p);;
+    	
+    }
+    
+    @SuppressWarnings("deprecation")
+	private void joinTeam(CTWTeam t, CTWPlayer p)
+    {
+    	t.getScoreboardTeam().addPlayer(p.getPlayer());
+    	t.getPlayers().add(p);
+    	p.setTeam(t);
+    	p.sendMessage(ChatColor.GOLD+"You have joined team " + t.getColoredName()+ChatColor.GOLD+"!");
+    }
+    
+    private CTWTeam getSmallestTeam()
+    {
+    	if(CTWTeam.RGB.getPlayerCount() < CTWTeam.CMY.getPlayerCount())
+    		return CTWTeam.RGB;
+    	else
+    		return CTWTeam.CMY;
     }
 }

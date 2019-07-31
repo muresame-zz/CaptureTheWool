@@ -15,7 +15,6 @@ import com.gmail.lynx7478.ctw.game.CTWPlayer;
 import com.gmail.lynx7478.ctw.game.CTWTeam;
 import com.gmail.lynx7478.ctw.game.roles.Role;
 import com.gmail.lynx7478.ctw.game.roles.RoleManager;
-import com.gmail.lynx7478.ctw.mapbuilder.MapBuilder;
 import com.gmail.lynx7478.ctw.utils.InventoryUtils;
 import com.gmail.lynx7478.ctw.utils.ItemBuilder;
 
@@ -33,11 +32,7 @@ public enum Menus {
 				@Override
 				public void onItemClick(CTWPlayer p, ItemStack item) 
 				{
-					if(item.getItemMeta().getDisplayName().equals(ChatColor.GOLD+"Click to join team"
-							+CTWTeam.RGB.getColoredName()+ChatColor.GOLD+"!"));
-					{
-						Bukkit.dispatchCommand(p.getPlayer(), "team rgb");
-					}
+					
 				}
 		
 			}, new ItemBuilder[]
@@ -54,7 +49,9 @@ public enum Menus {
 								@Override
 								public void onItemClick(CTWPlayer p,
 										ItemStack item) {
-									// TODO Auto-generated method stub
+									System.out.println("*click*");
+									CTW.getInstance().checkTeam(CTWTeam.RGB, p);
+									p.getPlayer().closeInventory();
 									
 								}
 								
@@ -71,7 +68,9 @@ public enum Menus {
 								@Override
 								public void onItemClick(CTWPlayer p,
 										ItemStack item) {
-									// TODO Auto-generated method stub
+									System.out.println("*click*");
+									CTW.getInstance().checkTeam(CTWTeam.CMY, p);
+									p.getPlayer().closeInventory();
 									
 								}
 								
@@ -161,6 +160,7 @@ public enum Menus {
 		this.giveToPlayer = giveToPlayer;
 		this.function = func;
 		this.isMapBuilder = isMapBuilder;
+		this.name = name;
 	}
 	
 	// ONLY FOR THE ROLE SELECTOR!!
@@ -177,6 +177,7 @@ public enum Menus {
 		}
 		this.giveToPlayer = giveToPlayer;
 		this.function = func;
+		this.name = invName;
 	}
 	
 	// Interact and inventory items. (Selectors)
@@ -195,6 +196,7 @@ public enum Menus {
 		}
 		this.giveToPlayer = giveToPlayer;
 		this.function = func;
+		this.name = invName;
 	}
 	
 	public ItemStack toItemStack()
@@ -204,7 +206,7 @@ public enum Menus {
 	
 	public String getName()
 	{
-		return ChatColor.AQUA+name;
+		return name;
 	}
 	
 	public Inventory getInventory()

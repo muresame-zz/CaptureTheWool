@@ -17,6 +17,7 @@ public class ItemBuilder {
 		ItemMeta me = this.item.getItemMeta();
 		me.setDisplayName(name);
 		this.item.setItemMeta(me);
+		this.f = f;
 	}
 	
 	public ItemBuilder(Material m, String name, ItemFunction f, byte data)
@@ -25,6 +26,7 @@ public class ItemBuilder {
 		ItemMeta me = this.item.getItemMeta();
 		me.setDisplayName(name);
 		this.item.setItemMeta(me);
+		this.f = f;
 	}
 	
 	public ItemStack toItemStack()

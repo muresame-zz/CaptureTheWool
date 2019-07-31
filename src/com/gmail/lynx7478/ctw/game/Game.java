@@ -86,6 +86,7 @@ public class Game {
 	public static boolean startGame()
 	{
 		initMap();
+		//TODO: World is not added in config.
 		map.loadMapConfig(new File(CTW.getInstance().getWorldDirectory()+File.separator+map.getConfig().getConfigurationSection("Map").getString("World")));
 		CTWTeam.RGB.setSpawn(getMap().getRGBSpawn().toLocation());
 		CTWTeam.CMY.setSpawn(getMap().getCMYSpawn().toLocation());

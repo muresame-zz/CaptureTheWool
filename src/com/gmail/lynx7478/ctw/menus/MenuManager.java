@@ -3,6 +3,7 @@ package com.gmail.lynx7478.ctw.menus;
 import java.util.ArrayList;
 import java.util.logging.Level;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -52,19 +53,22 @@ public class MenuManager implements Listener {
 		{
 			if(e.getCurrentItem() != null && e.getCurrentItem().getType() != Material.AIR)
 			{
+
 				if(e.getCurrentItem().hasItemMeta() && e.getCurrentItem().getItemMeta().hasDisplayName())
 				{
 					for(Menus s : selectors)
 					{
-						if(e.getInventory().getName().equals(s.getInventory().getName()))
+						if(s.getName().equalsIgnoreCase(e.getInventory().getName()))
 						{
 							for(ItemBuilder i : s.getContents())
 							{
-								i.getFunction().onItemClick(CTWPlayer.getCTWPlayer(e.getWhoClicked().getUniqueId()), e.getCurrentItem());
+								if(i.toItemStack().getItemMeta().getDisplayName().equals(e.getCurrentItem().getItemMeta().getDisplayName()))
+								{
+									System.out.println(i.toItemStack().getItemMeta().getDisplayName());
+									i.getFunction().onItemClick(CTWPlayer.getCTWPlayer(e.getWhoClicked().getUniqueId()), e.getCurrentItem());
+									e.setCancelled(true);
+								}
 							}
-						}else
-						{
-							return;
 						}
 					}
 				}
